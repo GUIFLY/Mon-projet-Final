@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title>{{ 'Resultat' }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-row>
+    <ion-col>
+      <ion-label class="lbl-search" item-start color="dark_light"> Recherche médecin :</ion-label>
+    </ion-col>
+    <ion-col>
+      <ion-label class="lbl-search-result" color="dark_light">{{doctorProfiles.length}} Results for
+        "Allergiste/Immunologiste"
+      </ion-label>
+    </ion-col>
+  </ion-row>
+
+<div *ngFor="let doctorProfile of doctorProfiles">
+
+  <!-- <doctor-profile-card [profile]="doctorProfile" [enableButton]="true"></doctor-profile-card> -->
+</div>
+
+<!-- <live-support-fab> -->
+
+<!-- </live-support-fab> -->
+
+</ion-content>

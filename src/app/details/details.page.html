@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>E-Health</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-card id="image">
+    <img src="assets/imgs/bocobi 2 ret.png" alt="">
+</ion-card>
+
+<p style="text-align: center;">Bienvenue dans le nouveau monde</p>
+<p style="text-align: center;">Ravi de vous Voir Parmi nous</p>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col text-center>
+        <p>Votre login : <strong>{{ userDetail }}</strong></p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-button shape="round" fill="outline" expand="block" color="success" href="/userconnecte">Continuer</ion-button>
+
+  <ion-button (click)="signOut()" color="danger" shape="round" fill="outline" expand="block">Déconnexion
+    <ion-icon slot="end" name="log-out-outline"></ion-icon>
+  </ion-button>
+
+
+
+</ion-content>

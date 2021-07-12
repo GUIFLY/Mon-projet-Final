@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>mes-constantes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-9>
+        <h2>Choix d'un module sur lequel se connecter</h2>
+      </ion-col>
+      <ion-col col-3 align-self-center>
+        <div style="text-align: right;">
+          <ion-button (click)="scan()" slot="end">
+            <ion-icon name="Bluetooth"></ion-icon>
+            <p>Scan</p>
+          </ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- <ion-list>
+    <button ion-item *ngFor="let device of divises">
+      <h2>{{device.name}}</h2>
+    </button>
+  </ion-list> -->
+
+  <p>Note: cliquer sur le module pour vous connecter</p>
+
+  <ion-grid>
+    <ion-row>
+      <h3>Terminal de communication</h3>
+    </ion-row>
+    <ion-row>
+      <ion-col col-9>
+        <ion-input type="text" placeholder="text à envoyer" style="background-color: white;"></ion-input>
+      </ion-col>
+      <ion-col col-3 align-self-center>
+        <div style="text-align: right;">
+          <ion-button expanded="block">Envoyer</ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <!-- <ion-list> -->
+    <!-- <button ion-item *ngFor="let serialData of serialDatas">
+      <ion-icon *ngIf="serialData.out==true" name="log-out"></ion-icon>
+      <ion-icon *ngIf="serialData.out==false" name="log-in"></ion-icon>
+      {{ serialData.data }}
+    </button> -->
+
+    <!-- <ion-list> 
+      <button ion-item *ngFor="let device of devices">
+        <h2>{{ device.name || 'Unnamed' }}</h2>
+        <p>{{ device.id }}</p>
+        <p>RSSI: {{ device.rssi }}</p>
+      </button>  
+     </ion-list>  -->
+  <!-- </ion-list> -->
+
+
+    <ion-list> 
+      <ion-button expanded="block" ion-item *ngFor="let device of devices" (click)="deviceSelected(device)">
+        <h2>{{ device.name || 'Unnamed' }}</h2>
+        <p>{{ device.id }}</p>
+        <p>RSSI: {{device.rssi}}</p>
+      </ion-button>  
+     </ion-list> 
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <p>{{ statusMessage }}</p>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Consultation</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-row class="row-form">
+
+
+    <form [formGroup]="form" novalidate class="form-text-box">
+
+      <div class="div-input">
+
+        <ion-row class="row-mobile" no-padding>
+          <ion-col no-padding class="col-mobile">
+            <ion-item no-lines no-padding>
+              <ion-textarea formControlName="username"
+                            name="username"
+                            type="text" spellcheck="false"
+                            autocapitalize="off"
+                            maxlength="400"
+                            placeholder="Entrez la description ici (Max 400 caractères)">
+
+              </ion-textarea>
+            </ion-item>
+
+          </ion-col>
+        </ion-row>
+
+
+      </div>
+
+
+      <div padding-right padding-left margin-top class="btn-login">
+        <ion-button shape="round" expand="block" color="success" href="/video-consultation" type="submit">
+          {{'SUIVANT'}}
+        </ion-button>
+      </div>
+
+
+    </form>
+
+
+  </ion-row>
+
+  <ion-fab bottom right>
+    <ion-button ion-fab icon-only href="/page-chat">
+      <ion-icon name="chatbubble-ellipses"></ion-icon>
+    </ion-button>
+  </ion-fab>
+
+</ion-content>

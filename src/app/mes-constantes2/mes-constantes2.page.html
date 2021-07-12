@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Constantes Prises</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="padding" padding>
+  <ion-card>
+    <ion-progress-bar value="0.5"></ion-progress-bar>
+    <h1>{{ temperature | formatTemperatureC }}</h1>
+    <h1>{{ temperature | formatTemperatureF }}</h1>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <p>{{ statusMessage }}</p>
+  </ion-toolbar>
+</ion-footer>

@@ -1,3 +1,113 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu menuId="main-menu" content-id="main">
+    <ion-header>
+      <ion-toolbar color="success">
+        <ion-title>Acceuil</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <ion-list>
+        <ion-menu-toggle>
+
+          <ion-item routerLink="/details">
+            <ion-icon name="home" slot="start"></ion-icon>
+            <ion-label>Acceuil</ion-label>
+          </ion-item>
+
+        <ion-item routerLink="/abonnement">
+          <ion-icon name="sunny" slot="start"></ion-icon>
+          <ion-label>Abonnement</ion-label>
+        </ion-item>
+
+        <ion-item routerLink="/bluetooth">
+          <ion-icon name="bluetooth" slot="start"></ion-icon>
+          <ion-label>bluetooth</ion-label>
+        </ion-item>
+
+        <ion-item routerLink="/alert">
+          <ion-icon name="notifications" slot="start"></ion-icon>
+          <ion-label>Alert</ion-label>
+        </ion-item>
+
+        <ion-item routerLink="/carnetelectronique">
+          <ion-icon name="musical-note" slot="start"></ion-icon>
+          <ion-label>Carnet électronique</ion-label>
+        </ion-item>
+
+        <ion-item routerLink="/compte">
+          <ion-icon name="accessibility" slot="start"></ion-icon>
+          <ion-label>Compte</ion-label>
+        </ion-item>
+
+        <ion-item routerLink="/conseil">
+          <ion-icon name="book" slot="start"></ion-icon>
+          <ion-label>Conseil</ion-label>
+        </ion-item>
+
+        <ion-item routerLink="/examen">
+          <ion-icon name="text" slot="start"></ion-icon>
+          <ion-label>Examen</ion-label>
+        </ion-item>
+
+        <ion-item routerLink="/facture">
+          <ion-icon name="logo-bitcoin" slot="start"></ion-icon>
+          <ion-label>Facture</ion-label>
+        </ion-item>
+
+        <ion-item routerLink="/forfait">
+          <ion-icon name="infinite" slot="start"></ion-icon>
+          <ion-label>Forfait</ion-label>
+        </ion-item>
+
+        <ion-item routerLink="/medicaments">
+          <ion-icon name="medal" slot="start"></ion-icon>
+          <ion-label>Medicament</ion-label>
+        </ion-item>
+
+        <ion-item routerLink="/mes-constantes">
+          <ion-icon name="thermometer" slot="start"></ion-icon>
+          <ion-label>Mes constantes</ion-label>
+        </ion-item>
+
+        <ion-item routerLink="/const">
+          <ion-icon name="mail" slot="start"></ion-icon>
+          <ion-label>const</ion-label>
+        </ion-item>
+
+        <ion-item routerLink="/rendezvous">
+          <ion-icon name="people" slot="start"></ion-icon>
+          <ion-label>Rendez-Vous</ion-label>
+        </ion-item>
+
+        <ion-item routerLink="/teleconsultation">
+          <ion-icon name="contract" slot="start"></ion-icon>
+          <ion-label>Téléconsultation</ion-label>
+        </ion-item>
+
+        <ion-item routerLink="/testget">
+          <ion-icon name="key" slot="start"></ion-icon>
+          <ion-label>Key</ion-label>
+        </ion-item>
+
+
+        <ion-item routerLink="/parametre">
+          <ion-icon name="cog" slot="start"></ion-icon>
+          <ion-label>Paramètre</ion-label>
+        </ion-item>
+
+        <ion-item routerLink="/wifi">
+          <ion-icon name="wifi" slot="start"></ion-icon>
+          <ion-label>Wifi</ion-label>
+        </ion-item>
+
+        <ion-item routerLink="/aide">
+          <ion-icon name="help" slot="start"></ion-icon>
+          <ion-label>Aide</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>

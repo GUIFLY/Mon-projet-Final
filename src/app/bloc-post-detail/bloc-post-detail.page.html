@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-buttons slot="start">
+    <ion-menu-button menu="main-menu"></ion-menu-button>
+  </ion-buttons>
+    <ion-title>{{title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-row class="row-iframe">
+    <iframe *ngIf="trustedVideoUrl" width="100%" height="200"
+            [src]="trustedVideoUrl" frameborder="0"
+            allowfullscreen
+            (load)="trustedVideoUrl ? handleIFrameLoadEvent() : null"
+    ></iframe>
+    <div *ngIf="!trustedVideoUrl && item.img" class="top-img" [style.backgroundImage]="'url(' + item.img + ')'">
+
+    </div>
+  </ion-row>
+
+
+  <ion-row>
+    <div item-end class="div-text">
+      <ion-label text-wrap class="lbl-title">{{item.title}}</ion-label>
+      <ion-label text-wrap class="lbl-description">{{item.smallDescription}}</ion-label>
+      <hr>
+      <ion-label text-wrap class="lbl-published-date">ÉDITORIAL CAMER EN LIGNE | PUBLIE LE: {{item.publishedDate}}
+      </ion-label>
+    </div>
+  </ion-row>
+
+
+  <div [innerHTML]="item.descriptionHTML" class="div-blog-container">
+
+  </div>
+
+</ion-content>
