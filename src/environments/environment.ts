@@ -3,7 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebaseConfig : {
+    apiKey: "AIzaSyAcaCOsl-03l-wRWK8xDv1RMU5tefXmUMs",
+    authDomain: "bocobi2.firebaseapp.com",
+    databaseURL: "https://bocobi2-default-rtdb.firebaseio.com",
+    projectId: "bocobi2",
+    storageBucket: "bocobi2.appspot.com",
+    messagingSenderId: "684757095432",
+    appId: "1:684757095432:web:11fe648b014fcc2212adbd",
+    measurementId: "G-90FCF0JT3Z"
+  }
 };
 
 /*

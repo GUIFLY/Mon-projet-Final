@@ -1,20 +1,46 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+  <ion-slides pager (ionSlideDidChange)="SlideChanged()">
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-slide>
+      <ion-list>
+      <!-- <div class="diag" style="background : url('assets/imgs/messages-ios.svg') no-repeat"> -->
+        <ion-icon name="copy" color="success"></ion-icon>
+      <!-- </div> -->
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+      <div>
+        <h2 id="tiil">Ergonomie</h2>
+        <p id="text">Nous nous adaptons à vos différents besoins !!</p>
+      </div>
+    </ion-list>
+    </ion-slide>
+
+    <ion-slide>
+    <ion-list>
+      <!-- <div class="diag" style="background : url('assets/imgs/messages-ios.svg') no-repeat"> -->
+        <ion-icon name="pulse" color="success"></ion-icon>
+        <!-- </div> -->
+  
+        <div>
+          <h2 id="tiil">Santé+</h2>
+          <p id="text">Faites vous examiner !!</p>
+        </div>
+      </ion-list>
+  
+    </ion-slide>
+
+    <ion-slide>
+    <ion-list>
+      <!-- <div class="diag" style="background : url('assets/imgs/messages-ios.svg') no-repeat"> -->
+        <ion-icon name="mail-unread" color="success"></ion-icon>
+        <!-- </div> -->
+  
+        <div>
+          <h2 id="tiil">Messagerie</h2>
+          <p id="text">chater avec vos différents internautes !</p>
+        </div>
+      </ion-list>
+    </ion-slide>
+  </ion-slides>
+  <ion-button expand="block" fill="clear" shape="round" href="/detail" id="skip">{{ skipMsg }}</ion-button>
 </ion-content>
+
