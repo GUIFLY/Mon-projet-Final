@@ -22,7 +22,7 @@ export class BlocPostDetailPage implements OnInit {
     private loadingCtrl: LoadingController) {
       if (this.navParams.data != undefined) {
         this.item = this.navParams.data;
-        this.title = this.item.title.substring(0, 25);
+        // this.title = this.item.title.substring(0, 25);
       }
      }
 

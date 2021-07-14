@@ -1,9 +1,57 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>medicaments</ion-title>
+  <ion-toolbar color="success">
+    <ion-title>Soins</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+  <ion-row class="row-form">
+
+
+    <form [formGroup]="form" novalidate class="form-login">
+
+      <div class="div-input">
+        <ion-row class="row-mobile" no-padding>
+          <ion-col no-padding col-2 text-center align-self-center class="country_code">
+            <ion-icon name="search-outline" class="icon-email" color="light"></ion-icon>
+          </ion-col>
+
+          <ion-col no-padding col-8 class="col-mobile">
+            <ion-item no-padding no-lines>
+              <ion-input #password formControlName="search"
+                         name="search" clearInput
+                         clearOnEdit="false"
+                         spellcheck="false"
+                         type="text"
+                         autocapitalize="off"
+                         maxlength="30"
+                         placeholder="Recherche">
+              </ion-input>
+
+            </ion-item>
+          </ion-col>
+          <ion-col no-padding col-2 text-center align-self-center class="row-mobile">
+            <ion-button shape="round" expand="block" color="light" clear icon-only>
+              <ion-icon name="mic-circle-outline" class="icon-email" color="secondary"></ion-icon>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+
+      </div>
+
+
+    </form>
+
+    <ion-list>
+      <ion-button shape="round" fill="outline" expand="block" color="success" ion-item *ngFor="let item of items" (click)="healthItemOnClick(item)">
+        <!-- <ion-icon ></ion-icon> -->
+        <ion-icon color="dark" name="mic-circle-outline" [name]="item.icon" item-start ></ion-icon>
+        <ion-label text-wrap color="dark">{{item.title}}</ion-label>
+        <ion-icon *ngIf="item.forwardIcon" item-end name="arrow-redo-outline" color="dark"></ion-icon>
+      </ion-button>
+    </ion-list>
+
+  </ion-row>
 
 </ion-content>

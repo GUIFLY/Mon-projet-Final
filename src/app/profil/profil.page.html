@@ -1,9 +1,34 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>profil</ion-title>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Profil</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content  parallax-header no-bounce class="bg-modal" padding>
+
+  <div class="header-image" [ngStyle]="{'background-image': 'url(' + user.coverImage +')'}">
+
+  </div>
+  <div class="main-content" text-wrap text-center></div>
+  <div style="text-align: center; font-weight: bold;">
+    <div class="circular" [ngStyle]="{'background-image': 'url(' + user.profileImage +')'}"></div>
+    <h2>{{user.full_name}}</h2>
+    <p>{{user.username}} &bull; {{user.email}}</p>
+    <!--<p class="profile-description">{{user.description}}</p>-->
+  </div>
+
+    <ion-list>
+      <ion-list-header>
+        Reglage
+      </ion-list-header>
+      <ion-button  shape="round" expand="block" fill="outline" color="dark" ion-item *ngFor="let setting of profileSettings">
+        <ion-icon [name]="setting.icon" item-start color=""></ion-icon>
+        <ion-label text-wrap color="dark_light">{{setting.text}}</ion-label>
+        <ion-icon item-end name="arrow-forward-outline" color=""></ion-icon>
+      </ion-button>
+    </ion-list>
 
 </ion-content>

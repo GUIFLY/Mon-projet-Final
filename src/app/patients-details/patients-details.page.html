@@ -1,9 +1,223 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>patients-details</ion-title>
+  <ion-toolbar color="success">
+    <ion-title>{{ 'Patient' }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
 
+  <ion-item no-lines>
+
+    <ion-icon item-start name="phone-portrait-outline" color="secondary">
+
+    </ion-icon>
+    <ion-label>
+      +237 699133259
+    </ion-label>
+
+    <ion-button icon-only clear item-end>
+      <ion-icon name="create" color="secondary">
+
+      </ion-icon>
+
+    </ion-button>
+
+  </ion-item>
+
+  <ion-card id="card-patient-information">
+
+    <ion-card-header text-uppercase>
+      <h3 style="color: black;">Informations de base</h3>
+    </ion-card-header>
+    <ion-label padding-top padding-left no-margin id="lbl-promo" text-wrap>Requis selon les directives
+      médicales et visible uniquement par le médecin.
+    </ion-label>
+
+    <ion-row id="row-form">
+
+
+      <form [formGroup]="form" novalidate id="form-login">
+
+        <div id="div-input" margin>
+
+          <ion-row id="row-mobile" no-padding>
+            <ion-col no-padding col-2 text-center align-self-center id="country_code">
+              <ion-icon name="cube-outline" id="icon-email" color="secondary"></ion-icon>
+            </ion-col>
+            <ion-col no-padding col-10 id="col-mobile">
+              <ion-item no-lines no-padding>
+                <ion-input formControlName="full_name" name="full_name" type="text" spellcheck="false"
+                  autocapitalize="off" maxlength="40" placeholder="Entrez le nom complet" clearInput
+                  clearOnEdit="false">
+
+                </ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+
+        </div>
+        <div id="div-input" margin>
+
+          <ion-row id="row-mobile" no-padding>
+            <ion-col no-padding col-2 text-center align-self-center id="country_code">
+              <ion-icon name="alarm-outline" id="icon-email" color="secondary"></ion-icon>
+            </ion-col>
+            <ion-col no-padding col-10 class="col-mobile">
+              <ion-item no-lines no-padding>
+                <ion-input formControlName="age" name="age" type="number" spellcheck="false" autocapitalize="off"
+                  maxlength="40" placeholder="Votre age" clearInput clearOnEdit="false">
+
+                </ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+
+
+        </div>
+
+
+        <div id="div-input" margin>
+
+          <ion-row id="row-mobile" no-padding>
+            <ion-col no-padding col-2 text-center align-self-center id="country_code">
+              <ion-icon name="cube-outline" id="icon-email" color="secondary"></ion-icon>
+            </ion-col>
+            <ion-col no-padding col-10 id="col-mobile">
+              <ion-item no-lines no-padding>
+                <ion-select formControlName="gender" name="gender"
+                  [class.invalid]="!form.controls.gender.valid && (submitted)" placeholder="Votre sexe">
+                  <!-- <ion-col *ngFor="let gender of genders" [value]="gender.id">{{gender.title}} -->
+                  <!-- </ion-col> -->
+                </ion-select>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+
+
+        </div>
+
+
+        <div class="div-input" margin>
+
+          <ion-row class="row-mobile" no-padding>
+            <ion-col no-padding col-2 text-center align-self-center class="country_code">
+              <ion-icon name="speedometer-outline" class="icon-email" color="secondary"></ion-icon>
+            </ion-col>
+            <ion-col no-padding col-10 class="col-mobile">
+              <ion-item no-lines no-padding>
+                <ion-input formControlName="weight" name="weight" type="number" spellcheck="false" autocapitalize="off"
+                  maxlength="40" placeholder="Votre poids en KG" clearInput clearOnEdit="false">
+
+                </ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+
+
+        </div>
+        <div id="div-input" margin>
+
+          <ion-row id="row-mobile" no-padding>
+            <ion-col no-padding col-2 text-center align-self-center id="country_code">
+              <ion-icon name="body-outline" id="icon-email" color="secondary"></ion-icon>
+            </ion-col>
+            <ion-col no-padding col-10 id="col-mobile">
+              <ion-item no-lines no-padding>
+                <ion-input formControlName="height" name="height" type="number" spellcheck="false" autocapitalize="off"
+                  maxlength="40" placeholder="Votre taille en CM" clearInput clearOnEdit="false">
+
+                </ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+
+
+        </div>
+
+
+        <div id="div-input" margin>
+
+          <ion-row id="row-mobile" no-padding>
+            <ion-col no-padding col-2 text-center align-self-center id="country_code">
+              <ion-icon name="body-outline" id="icon-email" color="secondary"></ion-icon>
+            </ion-col>
+            <ion-col no-padding col-10 id="col-mobile">
+              <ion-item no-lines no-padding>
+                <ion-input formControlName="address" name="address" type="text" spellcheck="false" autocapitalize="off"
+                  maxlength="40" placeholder="Votre addresse" clearInput clearOnEdit="false">
+                </ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+
+
+        </div>
+        <div id="div-input" margin>
+
+          <ion-row id="row-mobile" no-padding>
+            <ion-col no-padding col-2 text-center align-self-center id="country_code">
+              <ion-icon name="bus-outline" id="icon-email" color="secondary"></ion-icon>
+            </ion-col>
+            <ion-col no-padding col-10 id="col-mobile">
+              <ion-item no-lines no-padding>
+                <ion-input formControlName="city" name="city" type="text" spellcheck="false" autocapitalize="off"
+                  maxlength="40" placeholder="Votre ville" clearInput clearOnEdit="false">
+
+                </ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+
+
+        </div>
+
+
+        <ion-card-header text-uppercase>
+          <h3 style="color: black;">Informations Suplémentaires</h3>
+        </ion-card-header>
+        <ion-label padding-top padding-left no-margin id="lbl-promo" text-wrap>
+          Requis selon les directives médicales et visible uniquement par le médecin
+        </ion-label>
+
+
+        <ion-list margin>
+          <ion-item>
+            <ion-label text-wrap>Des diagnostiques précédents ?</ion-label>
+            <ion-toggle item-end color="secondary"></ion-toggle>
+          </ion-item>
+          <ion-item>
+            <ion-label text-wrap>Prenez vous des médicaments particuliers ?</ion-label>
+            <ion-toggle item-end color="secondary"></ion-toggle>
+          </ion-item>
+          <ion-item>
+            <ion-label text-wrap>Avez vous des allergies ?</ion-label>
+            <ion-toggle item-end color="secondary"></ion-toggle>
+          </ion-item>
+          <ion-item>
+            <ion-label text-wrap>Importer un document</ion-label>
+            <ion-button item-end ion-button clear icon-only>
+              <ion-icon name="attach-outline" color="secondary"></ion-icon>
+            </ion-button>
+          </ion-item>
+        </ion-list>
+
+
+        <ion-row padding-left>
+          <ion-item no-lines no-padding margin-top>
+            <ion-label text-wrap id="lbl-checkbox">Accepter <a>les termes et les conditions</a> pour avancer
+            </ion-label>
+            <ion-checkbox></ion-checkbox>
+          </ion-item>
+        </ion-row>
+
+
+        <div padding-right padding-left margin-bottom id="btn-forgot">
+          <ion-button (click)="validatePasswordAction()" icon-right type="submit" color="secondary">
+            {{'SUIVANT'}}
+          </ion-button>
+        </div>
+
+      </form>
+    </ion-row>
+  </ion-card>
 </ion-content>

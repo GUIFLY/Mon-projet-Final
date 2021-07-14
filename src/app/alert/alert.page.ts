@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 import {Notification} from "../../model/Notification";
 
 @Component({
@@ -27,9 +28,10 @@ export class AlertPage implements OnInit {
     }];
 
 
-  constructor() { }
+  constructor(public navCtrl: NavController) { }
 
   ngOnInit() {
+    console.log('ionViewDidLoad NotificationPage');
   }
 
 }

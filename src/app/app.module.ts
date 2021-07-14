@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 
-import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
+import { IonicModule, IonicRouteStrategy, NavParams } from '@ionic/angular';
 
 import { HttpClientModule } from '@angular/common/http';
 import { ApiServiceProvider } from 'src/providers/api-service/api-service';
@@ -31,7 +31,7 @@ import { BLE } from '@ionic-native/ble/ngx';
     HttpClientModule,
     AuthServiceProvider,
     BluetoothSerial,
-    BLE,
+    BLE, NavParams,
     ApiServiceProvider,
     UsersProvider,
     ConstantProvider,

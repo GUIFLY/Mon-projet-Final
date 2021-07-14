@@ -70,7 +70,7 @@ export class MesConstantesPage implements OnInit {
 
   deviceSelected(device) {
     console.log(JSON.stringify(device) + ' selected');
-    this.navCtrl.navigateForward("/Mes-Constantes2Page", {
+    this.navCtrl.navigateForward("/mes-constantes2", {
       // device: device
     });
   }

@@ -1,9 +1,34 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>medicaments-post</ion-title>
+  <ion-toolbar color="success">
+    <ion-title>Editorial BOCOBI</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
+
+  <ion-list>
+    
+    <button ion-button shape="round"  expand="block" color="dark" no-lines ion-item *ngFor="let item of health360ItemNews" (click)="healthItemOnClick(item)">
+
+      <div item-start class="img-item" [style.backgroundImage]="'url(' + item.img + ')'">
+        <ion-row style="height: 100%; align-items: center" justify-content-center>
+          <ion-icon *ngIf="item.videoURL" name="logo-youtube" color="success" class="icon-youtube"></ion-icon>
+        </ion-row>
+
+      </div>
+
+      <div item-end class="div-text">
+        <ion-label text-wrap class="lbl-title">{{item.title}}</ion-label>
+        <ion-label text-wrap class="lbl-description">{{item.smallDescription}}</ion-label>
+        <hr>
+        <ion-label text-wrap class="lbl-published-date">BOCOBI ONLINE EDITORIAL | Publié le : {{item.publishedDate}}
+        </ion-label>
+      </div>
+      <ion-item>
+        <ion-label></ion-label>
+      </ion-item>
+    </button>
+  </ion-list>
+
 
 </ion-content>

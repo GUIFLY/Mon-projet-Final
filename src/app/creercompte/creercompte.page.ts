@@ -20,21 +20,21 @@ export class CreercomptePage implements OnInit {
     'email': [
       { 
         type: 'required', 
-        message: 'Provide email.' 
+        message: 'Email requis' 
       },
       { 
         type: 'pattern', 
-        message: 'Email is not valid.' 
+        message: 'Email invalide.' 
       }
     ],
     'password': [
       { 
         type: 'required', 
-        message: 'Password is required.' 
+        message: 'Mot de passe requis.' 
       },
       { 
         type: 'minlength', 
-        message: 'Password length should be 6 characters long.' 
+        message: 'Le mot de passe doit avoir au moins 6 caractères' 
       }
     ]
   };
@@ -60,7 +60,7 @@ export class CreercomptePage implements OnInit {
     this.ionicAuthService.createUser(value)
       .then((response) => {
         this.errorMsg = "";
-        this.successMsg = "New user created.";
+        this.successMsg = "Utilisateur crée.";
       }, error => {
         this.errorMsg = error.message;
         this.successMsg = "";

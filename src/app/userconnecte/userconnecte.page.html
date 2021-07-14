@@ -1,9 +1,71 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>userconnecte</ion-title>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>E-Health</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
+  <h1 style="text-align: center; font-weight: bold;">Nos services</h1>
+  <div>
+    <ion-card button (click)="expression()" id="back">
+      <ion-card-header>
+        <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
+        <ion-card-title id="col">Téléconsultation</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        pratique médicale permettant de consulter un professionnel de
+        santé à distance, grâce aux nouvelles technologies.
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div>
+    <ion-card button (click)="examen()" id="back">
+      <ion-card-header>
+        <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
+        <ion-card-title id="col">Examen</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        procédure de diagnostic réalisée pour des motifs de santé. Par exemple :
+        - pour diagnostiquer des maladies
+        - pour mesurer la progression, la régression ou la guérison des maladies
+        - pour confirmer chez quelqu'un l'absence de maladie
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div>
+    <ion-card button (click)="rdv()" id="back">
+      <ion-card-header>
+        <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
+        <ion-card-title id="col">Rendez-vous</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        rencontre arrangée entre au moins deux personnes.
+        Exemple : RDV à l'hôpital à 14heures.
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div>
+    <ion-card button (click)="abonnement()" id="back">
+      <ion-card-header>
+        <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
+        <ion-card-title id="col">Abonnement</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        Contrat par lequel on acquiert le bénéfice d'un
+        service régulier moyennant un prix forfaitaire pour une durée déterminée.
+      </ion-card-content>
+    </ion-card>
+  </div>
+
 
 </ion-content>

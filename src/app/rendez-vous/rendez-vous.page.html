@@ -1,9 +1,41 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>rendez-vous</ion-title>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Rendez-Vous</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
+  <h2>Prendre un rendez-vous</h2>
+    <ion-item>
+      <ion-label fixed color="dark">Libellé</ion-label>
+      <ion-input type="text" [(ngModel)]="Libelle"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label fixed color="dark">Date</ion-label>
+    <ion-input type="date" [(ngModel)]="date"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label fixed color="dark">Heure</ion-label>
+    <ion-input type="time" [(ngModel)]="heure"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label fixed color="dark">Période</ion-label>
+    <ion-input type="number" [(ngModel)]="periode"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label fixed color="dark">Durée</ion-label>
+    <ion-input type="number" [(ngModel)]="duree"></ion-input>
+  </ion-item>
 
-</ion-content>
+  <ion-button shape="round" expand="block" color="success" (click)="goToSignup()">
+    Valider
+  </ion-button>
+  
+  </ion-content>
