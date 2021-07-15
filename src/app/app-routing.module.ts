@@ -231,6 +231,18 @@ const routes: Routes = [
     path: 'wifi',
     loadChildren: () => import('./wifi/wifi.module').then( m => m.WifiPageModule)
   },
+  {
+    path: 'video-call',
+    loadChildren: () => import('./video-call/video-call.module').then( m => m.VideoCallPageModule)
+  },
+  {
+    path: 'iconst1',
+    loadChildren: () => import('./iconst1/iconst1.module').then( m => m.Iconst1PageModule)
+  },
+  {
+    path: 'iconst2',
+    loadChildren: () => import('./iconst2/iconst2.module').then( m => m.Iconst2PageModule)
+  },
 ];
 
 @NgModule({

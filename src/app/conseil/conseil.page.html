@@ -1,9 +1,100 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>conseil</ion-title>
+<ion-header class="ion-padding">
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+          <ion-back-button color="danger"></ion-back-button>
+    </ion-buttons>
+    <ion-avatar slot="end">
+      <img
+      src="assets/imgs/ica-slidebox-img-3.png"
+      />
+    </ion-avatar>
+    <ion-card-content>
+      <h4
+        style="
+          font-weight: 600;
+          color: rgba(255, 255, 255, 0.81);
+          font-size: 16px;
+        "
+      >
+      E-Health
+      </h4>
+      <h6 style="font-weight: 600; color: rgb(55, 55, 55); font-size: 14px;">
+        Conseil
+      </h6>
+    </ion-card-content>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="ion-padding">
+  <ion-refresher
+    slot="fixed"
+    (ionRefresh)="doRefresh($event)"
+    pullFactor="0.8"
+    pullMin="60"
+    pullMax="120"
+  >
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
 
+  <ion-grid>
+    <ion-row>
+      <ion-col
+        size-lg="4"
+        size-md="6"
+        size-sm="12"
+        size="12"
+      >
+        <div class="container">
+          <div class="container-header-image">
+            <a>
+              <img class="img" src="assets/imgs/sample_2.jpg" />
+            </a>
+            <!-- <div
+              class="colored-shadow"
+              [ngStyle]="{'background-image': 'url('https://images.unsplash.com/photo-1581287053822-fd7bf4f4bfec?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ')' , 'opacity': 1}">
+            </div> -->
+          </div>
+          <div class="container-header-content">
+            <h3 class="title">
+              Quelques conseils pour améliorer votre santé
+            </h3>
+            <p style="color: rgb(48, 48, 48);">1.  Éviter le tabagisme
+              La consommation de tabac et l'exposition à la fumée indirecte sont des causes importantes de décès
+               prématuré par suite d'une maladie cardiaque et pulmonaire, d'un infarctus et du cancer, c'est-à-dire 
+               les principales maladies mortelles au Canada.</p>
+
+               <p style="color: rgb(48, 48, 48);">2.  Bien s'alimenter pour être en santé
+                Une bonne alimentation vous aide à rester en forme, à bien vous sentir et à maîtriser 
+                votre poids. Une bonne alimentation assure également une protection contre les maladies 
+                cariaques, les infarctus, le cancer et d'autres maladies graves. Voici quelques conseils 
+                tirés du Guide alimentaire canadien :
+                
+                Mangez de petites portions de viande maigre, de poisson ou de volaille et enlevez la graisse visible;
+                Planifiez vos repas à partir de légumes, de fruits et de céréales, par exemple du riz, des pâtes 
+                alimentaires, du pain et des céréales. Choisissez des aliments de grains entiers, par exemple du
+                 pain de blé entier, du riz brun et des céréales. Mangez également quelques portions de légumes 
+                 verts et jaunes, des fruits et des légumes tous les jours;
+                Choisissez du lait, du yaourt et du fromage cottage à faible teneur en graisse 
+                (1% ou 2% de gras de beurre, ou produits écrémés);</p>
+
+                <p style="color: rgb(48, 48, 48);">3.   Intégrer des activités physiques à votre vie
+                  Vous souhaitez protéger votre santé, atteindre ou conserver un poids santé, avoir plus d'énergie et 
+                  être moins stressé? Vous pouvez y parvenir en faisant 
+                  régulièrement des activités physiques. Les activités physiques aident votre cœur, vos poumons et vos 
+                  vaisseaux sanguins à mieux fonctionner tout en réduisant votre taux de cholestérol et votre tension 
+                  artérielle. Il est facile de faire des activités physiques. Prenez l'escalier plutôt que l'ascenseur.
+                   Descendez de l'autobus quelques arrêts plus tôt, et marchez le reste du trajet. Rendez-vous à pied 
+                   faire vos emplettes dans la voisinage plutôt que de prendre votre voiture. Levez-vous de votre fauteuil, 
+                   étirez vos muscles et faites des flexions quelques minutes par heure.</p>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

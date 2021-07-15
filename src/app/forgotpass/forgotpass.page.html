@@ -1,9 +1,29 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <!-- <ion-menu-button menu="main-menu"></ion-menu-button> -->
+      <ion-back-button color="danger"></ion-back-button>
+    </ion-buttons>
     <ion-title>Rescue</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
-</ion-content>
+<ion-content padding>
+  <!-- <p>page relative à l'affichage des details de restauration de mote de passe</p> -->
+  <p style="text-align: center;">Vous avez oublié votre mot de passe ? </p>
+  <ion-list>
+  
+    <ion-item>
+        <ion-label fixed>Login</ion-label>
+        <ion-input type="email" [(ngModel)]="tel"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+        <ion-label fixed> Ancien </ion-label>
+        <ion-input type="text" [(ngModel)]="email"></ion-input>
+    </ion-item>
+    </ion-list>
+  
+    <button large type="submit" id="presentButton">Soumettre</button>
+  </ion-content>
+  

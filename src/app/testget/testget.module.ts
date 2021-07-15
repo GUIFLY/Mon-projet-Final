@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import {ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
@@ -12,7 +12,7 @@ import { TestgetPage } from './testget.page';
   imports: [
     CommonModule,
     FormsModule,
-    IonicModule,
+    IonicModule,ReactiveFormsModule,
     TestgetPageRoutingModule
   ],
   declarations: [TestgetPage]
